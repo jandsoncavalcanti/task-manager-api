@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: task-manager-api
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: ${SHOW_SQL:true}
+  datasource:
+    driver-class-name: ${DB_DRIVER:org.postgresql.Driver}
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/taskmanagerapi}
+    username: ${DB_USER:admin}
+    password: ${DB_PASSWORD:admin}
+
+#gcp:
+#  firebase:
+#    service-account: classpath:task-manager-api-c68b5-firebase-adminsdk-zb761-e03e7ba380.json
